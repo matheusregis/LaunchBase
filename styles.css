@@ -2,6 +2,7 @@
 
 :root {
     --color-green: #50fa7b;
+    --color-blue: #282a36;
 }
 
 * {
@@ -82,4 +83,67 @@ header {
 
 #links-footer a{
     border-bottom: 1px solid var(--color-green);
+}
+
+/*=== CARDS ===*/
+
+.cards {
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 0 auto;
+    
+}
+
+.card {
+    background-color: var(--color-blue);
+    align-items: center;
+    text-align: center;
+}
+
+.card__image-container img {
+    width: 100%;
+    
+}
+
+.card__info {
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.card__text {
+    width: 100%;
+    background-color: var(--color-blue);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card__node {
+    color: #689f63;
+}
+
+.card__react {
+    color: #61dafb;
+}
+
+.card__java {
+    color: #df1f21;
+}
+
+.card__php{ 
+    color: #777bb3;
+}
+
+.card__htmlcss {
+    color: #e44d26;
+}
+
+.card__c {
+    color: #00549d;
 }
