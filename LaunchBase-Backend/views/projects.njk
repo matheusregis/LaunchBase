@@ -1,0 +1,49 @@
+{% extends "layout.njk" %}
+
+{% block head%}
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">   
+{% endblock %}
+
+{% block content %}
+
+
+<div id="wrapper">
+    <h1>Projetos</h1>
+</div>  
+
+<section class="cards">
+
+    {% for item in items %}
+    <div class="card" id = "{{item.id}}">
+        <div class="card__image-container  {{ 'featured-wrapper' if item.featured }} ">
+            <img src="{{item.src}}" alt="Imagem de {{item.language}}">
+            {% if item.featured %}
+                <div class="featured">Destaque</div>
+            {% endif %}
+        </div>
+        <div class="card__info">
+            <p class="card__text card__node">{{item.language}}</p>
+            <p class="card__text">Projetos</p>
+        </div>
+    </div>
+    {% endfor %}
+    
+
+</section>
+
+<div class="modal-overlay">
+    <div class="modal">
+        <a class="close-modal">
+            <i class="material-icons">close</i>
+        </a>
+
+        <div class="modal-content">
+            <iframe src="https://github.com/matheusregis/LaunchBase" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<script src="/scripts.js"></script>
+
+{% endblock %}
